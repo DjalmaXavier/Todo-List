@@ -14,13 +14,13 @@ window.addEventListener('load', () => {
         }
 
         const taskDiv = document.createElement('div')
-        /*adicionar classe*/
+        taskDiv.classList.add("task_div");
 
         const divValue = document.createElement('div');
         /*adicionar classe*/
 
         const taskInput = document.createElement('input');
-        /*adicionar classe*/
+        taskInput.classList.add("task_inp");
         taskInput.type = "text";
         taskInput.value = task;
         taskInput.setAttribute('readonly', 'readonly');

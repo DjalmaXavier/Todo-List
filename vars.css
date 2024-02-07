@@ -1,0 +1,7 @@
+:root {
+    --global-primary-color: rgb(193, 247, 158);
+    --primary-font: Arial, Helvetica, sans-serif;
+    --font-size: 20px;
+    --color-text: -webkit-linear-gradient(#7a08d8, #a3087c);
+    --border-radius: 15px
+}
