@@ -23,16 +23,21 @@ window.addEventListener('load', () => {
         taskInput.classList.add("task_inp");
         taskInput.type = "text";
         taskInput.value = task;
+        taskInput.maxLength = 200;
         taskInput.setAttribute('readonly', 'readonly');
 
         const taskButtons = document.createElement('div')
-
+        taskButtons.classList.add("task_buttons")
 
         const editButton = document.createElement('button')
         editButton.innerHTML = 'Editar'
+        editButton.classList.add("btn_edit");
+
 
         const removeButton = document.createElement('button')
         removeButton.innerHTML = 'Remover'
+        removeButton.classList.add("btn_remove");
+
 
 
 

@@ -1,7 +1,11 @@
 :root {
-    --global-primary-color: rgb(193, 247, 158);
+    --global-primary-color: #313333;
     --primary-font: Arial, Helvetica, sans-serif;
     --font-size: 20px;
-    --color-text: -webkit-linear-gradient(#7a08d8, #a3087c);
-    --border-radius: 15px
+    --color-buttons: rgb(186, 28, 207);
+    --color-text: #f0f8ff;
+    --border-radius: 15px;
+    --input_width-default: 70em;
+    --input_height-default: 3em;
+    --input-font_size: 20px;
 }
