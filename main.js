@@ -3,8 +3,12 @@ window.addEventListener('load', () => {
     const form = document.getElementById('task_form')
     const textTask = document.getElementById('task_input')
     const list = document.getElementById('tasks')
+    loadTasksFromLocalStorage()
+
     form.addEventListener('submit', (e) => {
+
         e.preventDefault();
+
 
         const task = textTask.value
 
@@ -13,11 +17,33 @@ window.addEventListener('load', () => {
             return
         }
 
+        createDiv(task);
+
+        addTaskToLocalStorage(task)
+
+        textTask.value = "";
+
+
+        function addTaskToLocalStorage(task) {
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.push(task);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+    })
+
+    function loadTasksFromLocalStorage() {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+        tasks.forEach(task => {
+            createDiv(task);
+        });
+    }
+
+    function createDiv(task) {
         const taskDiv = document.createElement('div')
         taskDiv.classList.add("task_div");
 
         const divValue = document.createElement('div');
-        /*adicionar classe*/
 
         const taskInput = document.createElement('input');
         taskInput.classList.add("task_inp");
@@ -39,8 +65,6 @@ window.addEventListener('load', () => {
         removeButton.classList.add("btn_remove");
 
 
-
-
         taskButtons.appendChild(editButton);
         taskButtons.appendChild(removeButton);
         divValue.appendChild(taskInput);
@@ -50,6 +74,7 @@ window.addEventListener('load', () => {
 
 
         removeButton.addEventListener('click', () => {
+            removeTaskFromLocalStorage(task)
             list.removeChild(taskDiv);
         })
 
@@ -63,11 +88,21 @@ window.addEventListener('load', () => {
             } else {
                 taskInput.setAttribute('readonly', 'readonly');
                 editButton.innerHTML = 'Editar';
+                updateTaskInLocalStorage(task, taskInput.value)
             }
         })
+    }
 
-        textTask.value = "";
+    function removeTaskFromLocalStorage(task) {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        const updatedTasks = tasks.filter(t => t !== task);
+        localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+    }
 
+    function updateTaskInLocalStorage(oldTask, newTask) {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        const updatedTasks = tasks.map(t => (t === oldTask ? newTask : t));
+        localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+    }
 
-    })
 })

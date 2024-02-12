@@ -1,0 +1,251 @@
+@media only screen and (min-width: 768px) and (max-width: 1152px) {
+    .main-container {
+        height: 94%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+    }
+
+    .sub-container {
+        background-color: #321D3D;
+        height: 90%;
+        border: 1px solid black;
+        border-radius: 20px;
+        -webkit-box-shadow: 25px 17px 31px 3px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 25px 17px 31px 3px rgba(0, 0, 0, 0.75);
+        box-shadow: 25px 17px 31px 3px rgba(0, 0, 0, 0.75);
+        width: 45em;
+    }
+
+
+    .task_h2 {
+        margin-top: 22px;
+        font-size: 30px;
+        color: #f0f8ff;
+        padding: 0 20px;
+        width: 70em;
+    }
+
+    #task_form {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20px;
+    }
+
+    #task_form #new_task_submit {
+        background-color: var(--global-primary-color);
+        font-size: var(--font-size);
+        font-weight: 600;
+        border: none;
+        padding-left: 20px;
+        background: #D62B80;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #task_form #task_input {
+        border: none;
+        border-radius: var(--border-radius);
+        width: 45em;
+        font-size: 20px;
+        background-color: #492A59;
+        color: aliceblue;
+
+    }
+
+    #tasks {
+        display: block;
+        border: 0px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        padding: 0px 5px;
+        margin-top: 0em;
+        width: 100%;
+        height: 26em;
+        overflow-y: scroll;
+    }
+
+    .task_div {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        margin-top: 40px;
+        background-color: #492A59;
+        border-radius: 15px;
+        width: 43em;
+        height: var(--input_height-default);
+    }
+
+    .task_div .task_inp {
+        border: none;
+        background-color: transparent;
+        color: var(--color-text);
+        padding: 10px 10px;
+        font-size: var(--input-font_size);
+        text-decoration: none;
+        width: 18em;
+        outline: none;
+        color: #d3e2f0;
+    }
+
+
+    .task_div .task_buttons {
+        display: flex;
+        justify-content: flex-end;
+        border: none;
+        align-items: center;
+    }
+
+    .task_div .btn_remove {
+        font-size: var(--font-size);
+        font-weight: 600;
+        border: none;
+        background: #A60D05;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .task_div .btn_edit {
+        font-size: var(--font-size);
+        font-weight: 600;
+        border: none;
+        background: #D62B80;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 767) {
+    body {
+        .main-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .sub-container {
+            background-color: #321D3D;
+            height: 90%;
+            border: 1px solid black;
+            border-radius: 20px;
+            -webkit-box-shadow: 25px 17px 31px 3px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 25px 17px 31px 3px rgba(0, 0, 0, 0.75);
+            box-shadow: 25px 17px 31px 3px rgba(0, 0, 0, 0.75);
+
+        }
+
+        .task_h2 {
+            width: 70em;
+        }
+
+        #task_form {
+            display: center;
+            justify-content: space-between;
+            height: 100%;
+            padding: 0 30px;
+        }
+
+        #task_form #new_task_submit {
+            background-color: var(--global-primary-color);
+            font-size: var(--font-size);
+            font-weight: 600;
+            border: none;
+            padding-left: 20px;
+            background: #D62B80;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            outline: none;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #task_form #task_input {
+            border: none;
+            border-radius: var(--border-radius);
+            padding-left: 30px;
+            width: 45em;
+            height: var(--input_height-default);
+            font-size: var(--input-font_size);
+            background-color: #492A59;
+            color: aliceblue;
+
+        }
+
+        #tasks {
+            display: block;
+            border: 0px solid rgb(0, 0, 0);
+            padding: 10px;
+            margin-top: 20px;
+            width: 100%;
+            height: 35em;
+            overflow-y: scroll;
+        }
+
+        .task_div {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            margin-top: 40px;
+            background-color: #492A59;
+            border-radius: 15px;
+            width: var(--input_width-default);
+            height: var(--input_height-default);
+        }
+
+        .task_div .task_inp {
+            border: none;
+            background-color: transparent;
+            color: var(--color-text);
+            padding: 10px 10px;
+            font-size: var(--input-font_size);
+            text-decoration: none;
+            width: 40em;
+            outline: none;
+            color: #d3e2f0;
+        }
+
+
+        .task_div .task_buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 10px 10px;
+            border: none;
+        }
+
+        .task_div .btn_remove {
+            font-size: var(--font-size);
+            font-weight: 600;
+            border: none;
+            background: #A60D05;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            outline: none;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .task_div .btn_edit {
+            font-size: var(--font-size);
+            font-weight: 600;
+            border: none;
+            background: #D62B80;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            outline: none;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}

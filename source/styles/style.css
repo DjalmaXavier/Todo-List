@@ -15,6 +15,7 @@ body {
 }
 
 h1 {
+    margin-top: 10px;
     padding-bottom: 40px;
     font-size: 40px;
     color: #f0f8ff;
@@ -23,29 +24,39 @@ h1 {
 }
 
 
-h2 {
-    margin-top: 30px;
-    font-size: 30px;
-    color: #f0f8ff;
-}
-
-
 .main-container {
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 3em;
+    margin-top: 20px;
+}
+
+.sub-container {
+    width: 70em;
+    background-color: #321D3D;
+    height: 90%;
+    border: 1px solid black;
+    border-radius: 20px;
+    -webkit-box-shadow: 25px 17px 31px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 25px 17px 31px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: 25px 17px 31px 3px rgba(0, 0, 0, 0.75);
+
 }
 
 .task_h2 {
+    margin-top: 40px;
+    font-size: 30px;
+    color: #f0f8ff;
+    padding: 0 20px;
     width: 70em;
 }
 
 #task_form {
-    display: center;
+    display: flex;
     justify-content: space-between;
     height: 100%;
+    padding: 0 30px;
 }
 
 #task_form #new_task_submit {
@@ -54,11 +65,12 @@ h2 {
     font-weight: 600;
     border: none;
     padding-left: 20px;
-    background: var(--color-buttons);
+    background: #D62B80;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     outline: none;
     text-decoration: none;
+    cursor: pointer;
 }
 
 #task_form #task_input {
@@ -68,23 +80,27 @@ h2 {
     width: 45em;
     height: var(--input_height-default);
     font-size: var(--input-font_size);
-    background-color: rgb(90, 88, 94);
+    background-color: #492A59;
     color: aliceblue;
 
 }
 
-#task_list {
-    overflow: scroll;
+#tasks {
+    display: block;
+    border: 0px solid rgb(0, 0, 0);
+    padding: 10px;
+    margin-top: 20px;
+    height: 35em;
+    overflow-y: scroll;
 }
 
 .task_div {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    margin-top: 40px;
-    background-color: rgb(0, 0, 0);
+    margin-top: 30px;
+    background-color: #492A59;
     border-radius: 15px;
-    width: var(--input_width-default);
     height: var(--input_height-default);
 }
 
@@ -97,7 +113,7 @@ h2 {
     text-decoration: none;
     width: 40em;
     outline: none;
-    color: #f0f8ff;
+    color: #d3e2f0;
 }
 
 
@@ -113,20 +129,22 @@ h2 {
     font-size: var(--font-size);
     font-weight: 600;
     border: none;
-    background: red;
+    background: #A60D05;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     outline: none;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .task_div .btn_edit {
     font-size: var(--font-size);
     font-weight: 600;
     border: none;
-    background: var(--color-buttons);
+    background: #D62B80;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     outline: none;
     text-decoration: none;
+    cursor: pointer;
 }

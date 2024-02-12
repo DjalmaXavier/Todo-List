@@ -5,28 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do list</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="vars.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/todo_list/source/styles/reset.css">
+    <link rel="stylesheet" href="./source/styles/style.css">
+    <link rel="stylesheet" href="/todo_list/source/styles/vars.css">
+    <link rel="stylesheet" href="/todo_list/source/styles/media.css">
 </head>
 
 <body>
     <div class="main-container">
-        <header>
-            <h1>Lista de tarefas</h1>
-            <form id="task_form">
-                <input type="text" id="task_input" placeholder="Digite sua tarefa..." maxlength="200" />
-                <button type="submit" id="new_task_submit">Adicionar tarefa</button>
-            </form>
-        </header>
-        <div class="task_h2">
-            <h2>Tarefas</h2>
+        <div class="sub-container">
+            <header>
+                <h1>Lista de tarefas</h1>
+                <form id="task_form">
+                    <input type="text" id="task_input" placeholder="Digite sua tarefa..." maxlength="200" />
+                    <button type="submit" id="new_task_submit">Adicionar tarefa</button>
+                </form>
+            </header>
+            <div class="task_h2">
+                <h2>Tarefas</h2>
+            </div>
+            <main>
+                <section class="task_list">
+                    <div id="tasks"></div>
+                </section>
+            </main>
         </div>
-        <main>
-            <section class="task_list">
-                <div id="tasks"></div>
-            </section>
-        </main>
     </div>
 </body>
 
